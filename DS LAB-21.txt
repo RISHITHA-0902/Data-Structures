@@ -1,0 +1,29 @@
+#include<stdio.h>
+#define MAX 10
+int visited[MAX],queue[MAX],front=0,rear=0;
+
+void BFS(int g[MAX][MAX],int n,int start){
+    queue[rear++]=start;
+    visited[start]=1;
+
+    while(front<rear){
+        int v=queue[front++];
+        printf("%d ",v);
+
+        for(int i=0;i<n;i++)
+            if(g[v][i] && !visited[i]){
+                queue[rear++]=i;
+                visited[i]=1;
+            }
+    }
+}
+
+int main(){
+    int g[MAX][MAX]={
+        {0,1,1,0},
+        {1,0,1,1},
+        {1,1,0,1},
+        {0,1,1,0}
+    };
+    BFS(g,4,0);
+}

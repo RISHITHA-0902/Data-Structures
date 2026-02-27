@@ -1,0 +1,21 @@
+#include<stdio.h>
+#define SIZE 10
+
+int hash[SIZE];
+
+void insert(int key){
+    int index=key%SIZE;
+    while(hash[index]!=0)
+        index=(index+1)%SIZE;
+    hash[index]=key;
+}
+
+int main(){
+    insert(10);
+    insert(20);
+    insert(30);
+
+    for(int i=0;i<SIZE;i++)
+        if(hash[i]!=0)
+            printf("%d at %d\n",hash[i],i);
+}
