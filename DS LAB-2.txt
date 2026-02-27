@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+    int n,x;
+    printf("How many numbers: ");
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i++){
+        scanf("%d",&x);
+        if(x%2==0) printf("Even\n");
+        else printf("Odd\n");
+    }
+}
