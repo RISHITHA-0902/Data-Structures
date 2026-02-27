@@ -34,4 +34,4 @@ This repository contains C programs for Data Structures lab.
 C Programming
 
 ## Author
-RISHITHA
+N.RISHITHA
